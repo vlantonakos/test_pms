@@ -22,8 +22,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-      with:
-           path: 'demo(5)/demo/'
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
@@ -31,6 +29,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Change to Project Directory
-      run: cd 'demo(5)/demo/ || exit
+      run: cd 'demo(5)/demo/'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
