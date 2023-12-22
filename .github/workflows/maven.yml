@@ -31,6 +31,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Change to Project Directory
-      run: cd 'demo(5)/demo/
+      run: cd 'demo(5)/demo/ || exit
     - name: Build with Maven
       run: mvn -B package --file pom.xml
